@@ -1,32 +1,67 @@
 import 'package:flutter/material.dart';
-import 'package:student/data/notifiers.dart';
-import 'package:student/views/pages/welcome_page.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.all(20.0),
-      child: Column(
-        children: [
-          ListTile(
-            title: Text('Logout'),
-            onTap: () {
-              selectedPageNotifier.value = 0;
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return WelcomePage();
-                  },
-                ),
-              );
-            },
-          ),
-        ],
+    return SingleChildScrollView(
+      child: Padding(
+        padding: EdgeInsets.all(20.0),
+        child: Column(
+          children: [
+            TextFormField(
+              decoration: InputDecoration(labelText: 'Name'),
+              enabled: false,
+            ),
+            TextFormField(
+              decoration: InputDecoration(labelText: 'Class'),
+              enabled: false,
+            ),
+            TextFormField(
+              decoration: InputDecoration(labelText: 'City'),
+              enabled: false,
+            ),
+            TextFormField(
+              decoration: InputDecoration(labelText: 'Address'),
+              enabled: false,
+            ),
+            TextFormField(
+              decoration: InputDecoration(labelText: 'Contact'),
+              enabled: false,
+            ),
+            TextFormField(
+              decoration: InputDecoration(labelText: 'Subjects'),
+              enabled: false,
+            ),
+            TextFormField(
+              decoration: InputDecoration(labelText: 'Board'),
+              enabled: false,
+            ),
+            TextFormField(
+              decoration: InputDecoration(labelText: 'Timings'),
+              enabled: false,
+            ),
+            TextFormField(
+              decoration: InputDecoration(labelText: 'No. of days'),
+              enabled: false,
+            ),
+            TextFormField(
+              decoration: InputDecoration(labelText: 'Mode of tuition'),
+              enabled: false,
+            ),
+            TextFormField(
+              decoration: InputDecoration(labelText: 'Fee'),
+              enabled: false,
+            ),
+            TextFormField(
+              decoration: InputDecoration(labelText: 'Additional remarks'),
+              enabled: false,
+            ),
+          ],
+        ),
       ),
     );
   }
 }
+
